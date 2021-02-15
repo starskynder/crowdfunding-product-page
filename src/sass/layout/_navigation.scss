@@ -12,14 +12,6 @@
   }
 
   &__open {
-    background-image: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 0%, 0.7),
-      hsla(0, 0%, 100%, 0.6)
-    );
-
-    height: 100vh;
-
     @media screen and (min-width: 47em) {
       flex-flow: row nowrap;
       height: auto;
@@ -33,16 +25,36 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 2rem;
-
+    z-index: 100;
     @media screen and (min-width: 47em) {
       flex: auto;
     }
   }
 
   &__list {
-    padding: 2rem;
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0.7),
+      hsla(0, 0%, 100%, 0.6)
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    padding: 8rem 2rem;
     background-color: transparent;
     display: none;
+
+    height: 100vh;
+
+    @media screen and (min-width: 47em) {
+      position: static;
+      background-image: none;
+      width: auto;
+      height: auto;
+      padding: 2rem;
+    }
 
     &-item {
       background-color: $white;
@@ -78,6 +90,10 @@
 
     @media screen and (min-width: 47em) {
       flex-flow: row nowrap;
+      position: initial;
+      background-image: none;
+      width: auto;
+      height: auto;
     }
   }
 
