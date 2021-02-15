@@ -1,0 +1,62 @@
+// HEADER
+.header {
+  background-color: transparent;
+  text-align: center;
+
+  &__logo {
+    display: inline-block;
+    margin: 0 auto;
+    transform: translateY(calc(-50% + -2rem));
+  }
+
+  &__text {
+    margin: 2.5rem 0;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bookmark {
+    border: none;
+    background-color: transparent;
+    @media screen and (min-width: 47em) {
+      width: 19rem;
+      font-weight: 700;
+      color: inherit;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      border-radius: 30px;
+
+      background-color: hsl(192%, 29%, 97%);
+      cursor: pointer;
+    }
+
+    &-img {
+      max-width: 6rem;
+      display: block;
+    }
+
+    &-book {
+      padding: 0 2rem;
+      display: none;
+
+      @media screen and (min-width: 47em) {
+        display: block;
+      }
+    }
+  }
+
+  &:focus,
+  &:hover {
+    svg circle {
+      fill: lighten($dark-gray, 5%);
+    }
+  }
+}

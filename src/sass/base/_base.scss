@@ -30,7 +30,8 @@ body {
   background-size: contain;
   background-position: left top;
   background-repeat: no-repeat;
-
+  background-color: $dark-white;
+  position: relative;
   @media screen and (min-width: 23.5em) {
     background-image: url(./../../images/image-hero-desktop.jpg);
   }

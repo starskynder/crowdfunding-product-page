@@ -1,0 +1,23 @@
+// STATS
+.stats {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    color: inherit;
+  }
+
+  &__box-number {
+    color: $black;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  &__progress {
+    progress[value] {
+      background-color: red;
+    }
+  }
+}
