@@ -1,0 +1,52 @@
+// PLEDGE COMPONENT
+.pledge {
+  border: 1px solid lighten($color: $dark-gray, $amount: 20%);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+
+  &__top {
+    @media screen and (min-width: 47em) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__bottom {
+    @media screen and (min-width: 47em) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    margin: 2rem 0;
+  }
+
+  &__cost {
+    color: $moderate-cyan;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+
+  &__left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+
+    div {
+      margin-right: 1rem;
+      font-weight: 700;
+      color: $black;
+      font-size: 3rem;
+    }
+  }
+
+  &-inactive {
+    opacity: 0.5;
+  }
+}

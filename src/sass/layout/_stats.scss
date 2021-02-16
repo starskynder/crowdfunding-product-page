@@ -5,10 +5,6 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 47em) {
-    padding: 2rem 5rem;
-  }
-
   &__boxes {
     width: 100%;
     display: flex;

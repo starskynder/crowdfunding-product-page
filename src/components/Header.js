@@ -8,9 +8,8 @@ const Header = () => {
       <div className="box">
         <img src={logomc} alt="logo" className="header__logo" />
 
-        <h1 className="heading-primary">
-          Mastercraft Bamboo
-          <br /> Monitor Riser
+        <h1 className="heading-primary header__title">
+          Mastercraft Bamboo Monitor Riser
         </h1>
         <p className="header__text">
           A beautiful &amp; handcrafted monitor stand to reduce neck and eye

@@ -3,6 +3,7 @@ import "./sass/main.scss";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Stats from "./components/Stats";
+import About from "./components/About";
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -18,6 +19,7 @@ function App() {
       <div className="wrapper">
         <Header />
         <Stats />
+        <About />
       </div>
     </>
   );

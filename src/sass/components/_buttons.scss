@@ -15,3 +15,22 @@
     background-color: $dark-cyan;
   }
 }
+
+.cta-btn--pledge {
+  @extend .cta-btn;
+  padding: 0.5rem 3rem;
+  max-height: 5rem;
+  font-size: 1.4rem;
+}
+
+.cta-btn--inactive {
+  @extend .cta-btn--pledge;
+
+  background-color: $dark-gray;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $dark-gray;
+  }
+}

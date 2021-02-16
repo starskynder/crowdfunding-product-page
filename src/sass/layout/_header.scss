@@ -2,15 +2,27 @@
 .header {
   background-color: transparent;
   text-align: center;
+  position: relative;
 
   &__logo {
-    display: inline-block;
-    margin: 0 auto;
-    transform: translateY(calc(-50% + -2rem));
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    display: block;
+
+    transform: translate(-50%);
   }
 
   &__text {
     margin: 2.5rem 0;
+
+    @media screen and (min-width: 47em) {
+      margin: 2.5rem 0 4rem 0;
+    }
+  }
+
+  &__title {
+    margin-top: 2rem;
   }
 
   &__bottom {
