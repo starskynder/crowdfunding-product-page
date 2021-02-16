@@ -36,6 +36,12 @@
 
       background-color: hsl(192%, 29%, 97%);
       cursor: pointer;
+      &:focus,
+      &:hover {
+        svg circle {
+          fill: lighten($dark-gray, 5%);
+        }
+      }
     }
 
     &-img {
@@ -50,13 +56,6 @@
       @media screen and (min-width: 47em) {
         display: block;
       }
-    }
-  }
-
-  &:focus,
-  &:hover {
-    svg circle {
-      fill: lighten($dark-gray, 5%);
     }
   }
 }
