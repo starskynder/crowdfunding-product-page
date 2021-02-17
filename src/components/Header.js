@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as Bookmark } from "./../images/icon-bookmark.svg";
 import logomc from "./../images/logo-mastercraft.svg";
 
-const Header = () => {
+const Header = ({ toggleModal }) => {
   return (
     <header className="header">
       <div className="box">
@@ -16,7 +16,10 @@ const Header = () => {
           strain.
         </p>
         <div className="header__bottom">
-          <button className="cta-btn"> Back this project</button>
+          <button className="cta-btn" onClick={toggleModal}>
+            {" "}
+            Back this project
+          </button>
           <button className="header__bookmark">
             <Bookmark className="header__bookmark-img" />
 

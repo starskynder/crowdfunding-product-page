@@ -12,7 +12,12 @@ html {
   //This define 1 rem. And 1 rem = 10px
   font-size: 62.5%; // 10px/16px = 62.5%
   scroll-behavior: smooth;
-  height: -webkit-fill-available;
+
+  min-height: 100%;
+
+  position: relative;
+
+  background-attachment: fixed;
 }
 
 body {
@@ -31,10 +36,15 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
   background-color: $dark-white;
-  position: relative;
+
   @media screen and (min-width: 23.5em) {
     background-image: url(./../../images/image-hero-desktop.jpg);
   }
+}
+
+#root {
+  min-height: 100%;
+  width: 100%;
 }
 
 img,

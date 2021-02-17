@@ -1,7 +1,7 @@
 import React from "react";
 import Pledge from "./Pledge";
 
-const About = () => {
+const About = ({ toggleModal }) => {
   return (
     <section className="about box">
       <h2 className="heading-secondary">About this project</h2>
@@ -23,6 +23,7 @@ const About = () => {
   you’ll be added to a special Backer member list."
         pledge="  Pledge $75 or more"
         left={101}
+        toggleModal={toggleModal}
       />
       <Pledge
         title="Black Edition Stand"
@@ -30,6 +31,7 @@ const About = () => {
             member list. Shipping is included."
         pledge="Pledge $75 or more"
         left={64}
+        toggleModal={toggleModal}
       />
 
       <Pledge
@@ -38,6 +40,7 @@ const About = () => {
         to our Backer member list. Shipping is included."
         pledge="Pledge $200 or more"
         left={0}
+        toggleModal={toggleModal}
       />
     </section>
   );

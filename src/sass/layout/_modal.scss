@@ -1,0 +1,33 @@
+//MODAL PLEDGES
+.modal {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.7),
+    hsla(0, 0%, 100%, 0.6)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+
+  &__box {
+    max-width: 73rem;
+    margin: auto;
+    z-index: 300;
+  }
+
+  &__text {
+    margin: 2rem 0;
+  }
+
+  &__close {
+    margin-left: auto;
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+}
