@@ -1,8 +1,8 @@
 import React from "react";
 
-const Pledge = ({ text, title, pledge, left, toggleModal }) => {
+const Pledge = ({ text, title, pledge, left, toggleModal, outofstock }) => {
   return (
-    <div className={left > 0 ? "pledge" : "pledge pledge-inactive"}>
+    <div className={!outofstock ? "pledge" : "pledge pledge-inactive"}>
       <div className="pledge__top">
         {" "}
         <h2 className="heading-secondary">{title}</h2>
@@ -16,9 +16,11 @@ const Pledge = ({ text, title, pledge, left, toggleModal }) => {
         </div>
         <button
           className={
-            left > 0 ? "cta-btn--pledge" : "cta-btn--pledge cta-btn--inactive"
+            !outofstock
+              ? "cta-btn--pledge"
+              : "cta-btn--pledge cta-btn--inactive"
           }
-          disabled={left > 0 ? false : true}
+          disabled={outofstock ? true : false}
           onClick={toggleModal}
         >
           {left > 0 ? "Select Reward" : "Out of Stock"}

@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as Bookmark } from "./../images/icon-bookmark.svg";
 import logomc from "./../images/logo-mastercraft.svg";
 
-const Header = ({ toggleModal }) => {
+const Header = ({ toggleModal, handleBookmark, bookmarked }) => {
   return (
     <header className="header">
       <div className="box">
@@ -17,13 +17,22 @@ const Header = ({ toggleModal }) => {
         </p>
         <div className="header__bottom">
           <button className="cta-btn" onClick={toggleModal}>
-            {" "}
             Back this project
           </button>
-          <button className="header__bookmark">
+          <button
+            className={
+              bookmarked
+                ? "header__bookmark header__bookmark--active"
+                : "header__bookmark"
+            }
+            alt="bookmark"
+            onClick={handleBookmark}
+          >
             <Bookmark className="header__bookmark-img" />
 
-            <span className="header__bookmark-book">Bookmark</span>
+            <span className="header__bookmark-book">
+              {bookmarked ? "Bookmarked" : " Bookmark"}
+            </span>
           </button>
         </div>
       </div>

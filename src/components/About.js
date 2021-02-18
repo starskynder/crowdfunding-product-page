@@ -1,7 +1,7 @@
 import React from "react";
 import Pledge from "./Pledge";
 
-const About = ({ toggleModal }) => {
+const About = ({ toggleModal, pledges }) => {
   return (
     <section className="about box">
       <h2 className="heading-secondary">About this project</h2>
@@ -17,7 +17,25 @@ const About = ({ toggleModal }) => {
         desk space below your computer to allow notepads, pens, and USB sticks
         to be stored under the stand.
       </p>
-      <Pledge
+      {pledges.map((pledgeitem, index) => {
+        const { text, outofstock, pledge, title, left, name } = pledgeitem;
+
+        if (name !== "noreward") {
+          return (
+            <Pledge
+              key={index}
+              title={title}
+              text={text}
+              pledge={pledge}
+              left={left}
+              toggleModal={toggleModal}
+              outofstock={outofstock}
+            />
+          );
+        }
+      })}
+
+      {/* <Pledge
         title="Bamboo Stand"
         text="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
   you’ll be added to a special Backer member list."
@@ -41,7 +59,7 @@ const About = ({ toggleModal }) => {
         pledge="Pledge $200 or more"
         left={0}
         toggleModal={toggleModal}
-      />
+      /> */}
     </section>
   );
 };

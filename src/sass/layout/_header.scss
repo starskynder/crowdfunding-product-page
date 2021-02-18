@@ -69,5 +69,24 @@
         display: block;
       }
     }
+
+    &--active {
+      color: $dark-cyan;
+
+      &:hover {
+        color: $moderate-cyan;
+      }
+      &:hover svg circle {
+        fill: $moderate-cyan;
+      }
+    }
+
+    &--active svg circle {
+      fill: $dark-cyan;
+    }
+
+    &--active svg path {
+      fill: $white;
+    }
   }
 }

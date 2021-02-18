@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import closemodal from "./../images/icon-close-modal.svg";
 import PledgeRadio from "./PledgeRadio";
 
-const Modal = ({ toggleModal }) => {
+const Modal = ({ toggleModal, pledges, backProject, toggleSuccessModal }) => {
   const [status, setStatus] = useState("");
-
+  console.log(pledges);
   const toggleStatus = (currstatus) => {
     console.log(currstatus);
     setStatus(currstatus);
@@ -20,13 +20,51 @@ const Modal = ({ toggleModal }) => {
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
           the world?
         </p>
-        <PledgeRadio
+
+        {pledges.map((pledgeitem) => {
+          const {
+            name,
+            text,
+            outofstock,
+            pledge,
+            noreward,
+            title,
+            cost,
+            stand,
+            left,
+          } = pledgeitem;
+
+          return (
+            <PledgeRadio
+              pledgeitem={pledgeitem}
+              toggleStatus={toggleStatus}
+              status={status}
+              backProject={backProject}
+              toggleSuccessModal={toggleSuccessModal}
+              /*   name={name}
+              text={text}
+              outofstock={outofstock}
+              pledge={pledge}
+              noreward={noreward}
+              title={title}
+              cost={cost}
+              stand={stand}
+              left={left}
+              toggleStatus={toggleStatus}
+              status={status}
+              backProject={backProject}
+              toggleSuccessModal={toggleSuccessModal} */
+            />
+          );
+        })}
+        {/*   <PledgeRadio
           text=" Choose to support us without a reward if you simply believe in our project. As a backer, 
   you will be signed up to receive product updates via email."
           noreward={true}
           title="Pledge with no reward"
           pledge="no reward"
           left="1"
+          cost="0"
           stand="noreward"
           status={status}
           toggleStatus={toggleStatus}
@@ -64,7 +102,7 @@ const Modal = ({ toggleModal }) => {
           left={0}
           noreward={true}
           stand="mahogany special edition"
-        />
+        /> */}
       </div>
     </div>
   );

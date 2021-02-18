@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 
 const PledgeRadio = ({
-  text,
-  title,
-  pledge,
-  left,
-  toggleModal,
-  noreward,
-  cost,
-  stand,
+  pledgeitem,
   toggleStatus,
   status,
+  backProject,
+  toggleSuccessModal,
 }) => {
-  const [pledgeValue, setPledgeValue] = useState(0);
+  const {
+    name,
+    text,
+    outofstock,
+    title,
+    pledge,
+    left,
+    noreward,
+    cost,
+    stand,
+  } = pledgeitem;
+  const [value, setValue] = useState(cost);
+  const handlePledgeValue = (e) => {
+    const value = e.target.value;
+    setValue(value);
+  };
+
+  const handleSubmit = () => {
+    toggleSuccessModal();
+    backProject(name, value);
+    setValue(cost);
+  };
 
   return (
     <div
       className={
-        left > 0 && status === pledge
+        !outofstock && status === pledge
           ? "pledge pledgeradio pledgeradio-checked"
-          : left > 0
+          : !outofstock
           ? "pledge pledgeradio"
           : "pledge pledgeradio pledge-inactive"
       }
@@ -29,7 +45,7 @@ const PledgeRadio = ({
           <input
             type="radio"
             onChange={(e) => toggleStatus(pledge)}
-            disabled={left <= 0}
+            disabled={outofstock}
             name="pledge"
             value={stand}
             checked={status === pledge}
@@ -60,10 +76,17 @@ const PledgeRadio = ({
             <input
               type="number"
               min={cost}
+              value={value}
               className="pledgeradio__input"
               placeholder={cost}
+              onChange={handlePledgeValue}
             />
-            <button className="cta-btn--pledge">Continue</button>
+            <button
+              className="cta-btn--pledge"
+              onClick={(e) => handleSubmit(e)}
+            >
+              Continue
+            </button>
           </div>
         </div>
       ) : null}
