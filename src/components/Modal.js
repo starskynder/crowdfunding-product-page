@@ -22,18 +22,6 @@ const Modal = ({ toggleModal, pledges, backProject, toggleSuccessModal }) => {
         </p>
 
         {pledges.map((pledgeitem) => {
-          const {
-            name,
-            text,
-            outofstock,
-            pledge,
-            noreward,
-            title,
-            cost,
-            stand,
-            left,
-          } = pledgeitem;
-
           return (
             <PledgeRadio
               pledgeitem={pledgeitem}
@@ -41,68 +29,9 @@ const Modal = ({ toggleModal, pledges, backProject, toggleSuccessModal }) => {
               status={status}
               backProject={backProject}
               toggleSuccessModal={toggleSuccessModal}
-              /*   name={name}
-              text={text}
-              outofstock={outofstock}
-              pledge={pledge}
-              noreward={noreward}
-              title={title}
-              cost={cost}
-              stand={stand}
-              left={left}
-              toggleStatus={toggleStatus}
-              status={status}
-              backProject={backProject}
-              toggleSuccessModal={toggleSuccessModal} */
             />
           );
         })}
-        {/*   <PledgeRadio
-          text=" Choose to support us without a reward if you simply believe in our project. As a backer, 
-  you will be signed up to receive product updates via email."
-          noreward={true}
-          title="Pledge with no reward"
-          pledge="no reward"
-          left="1"
-          cost="0"
-          stand="noreward"
-          status={status}
-          toggleStatus={toggleStatus}
-        />
-        <PledgeRadio
-          title="Bamboo Stand"
-          text="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
-  you’ll be added to a special Backer member list."
-          pledge="Pledge $25 or more"
-          cost="25"
-          left={101}
-          noreward={false}
-          stand="bamboo stand"
-          status={status}
-          toggleStatus={toggleStatus}
-        />
-        <PledgeRadio
-          title="Black Edition Stand"
-          text="  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-            member list. Shipping is included."
-          pledge="Pledge $75 or more"
-          cost="75"
-          left={64}
-          noreward={false}
-          stand="black edition stand"
-          status={status}
-          toggleStatus={toggleStatus}
-        />
-        <PledgeRadio
-          title="Mahogany Special Edition"
-          text="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-        to our Backer member list. Shipping is included."
-          pledge="Pledge $200 or more"
-          cost="200"
-          left={0}
-          noreward={true}
-          stand="mahogany special edition"
-        /> */}
       </div>
     </div>
   );

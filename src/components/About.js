@@ -18,48 +18,16 @@ const About = ({ toggleModal, pledges }) => {
         to be stored under the stand.
       </p>
       {pledges.map((pledgeitem, index) => {
-        const { text, outofstock, pledge, title, left, name } = pledgeitem;
-
-        if (name !== "noreward") {
+        if (pledgeitem.name !== "noreward") {
           return (
             <Pledge
               key={index}
-              title={title}
-              text={text}
-              pledge={pledge}
-              left={left}
+              pledgeitem={pledgeitem}
               toggleModal={toggleModal}
-              outofstock={outofstock}
             />
           );
         }
       })}
-
-      {/* <Pledge
-        title="Bamboo Stand"
-        text="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
-  you’ll be added to a special Backer member list."
-        pledge="  Pledge $75 or more"
-        left={101}
-        toggleModal={toggleModal}
-      />
-      <Pledge
-        title="Black Edition Stand"
-        text="  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-            member list. Shipping is included."
-        pledge="Pledge $75 or more"
-        left={64}
-        toggleModal={toggleModal}
-      />
-
-      <Pledge
-        title="Mahogany Special Edition"
-        text="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-        to our Backer member list. Shipping is included."
-        pledge="Pledge $200 or more"
-        left={0}
-        toggleModal={toggleModal}
-      /> */}
     </section>
   );
 };

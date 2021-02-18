@@ -1,10 +1,10 @@
 import React from "react";
 
-const Pledge = ({ text, title, pledge, left, toggleModal, outofstock }) => {
+const Pledge = ({ pledgeitem, toggleModal }) => {
+  const { text, outofstock, pledge, title, left } = pledgeitem;
   return (
     <div className={!outofstock ? "pledge" : "pledge pledge-inactive"}>
       <div className="pledge__top">
-        {" "}
         <h2 className="heading-secondary">{title}</h2>
         <p className="pledge__cost">{pledge}</p>
       </div>
