@@ -157,10 +157,10 @@ function App() {
   }, [stats]);
 
   useEffect(() => {
-    if (modalOpen) {
+    if (modalOpen || successModalOpen) {
       window.scrollTo(0, 0);
     }
-  }, [modalOpen]);
+  }, [modalOpen, successModalOpen]);
 
   return (
     <>
