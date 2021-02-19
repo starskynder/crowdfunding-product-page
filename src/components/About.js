@@ -3,7 +3,7 @@ import Pledge from "./Pledge";
 
 const About = ({ toggleModal, pledges }) => {
   return (
-    <section className="about box">
+    <section className="about box" id="about">
       <h2 className="heading-secondary">About this project</h2>
       <p className="about__text">
         The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
@@ -12,7 +12,7 @@ const About = ({ toggleModal, pledges }) => {
         make you more comfortable while at work, helping you stay focused on the
         task at hand.
       </p>
-      <p className="about__text">
+      <p className="about__text" id="getstarted">
         Featuring artisan craftsmanship, the simplicity of design creates extra
         desk space below your computer to allow notepads, pens, and USB sticks
         to be stored under the stand.

@@ -6,7 +6,7 @@ const Header = ({ toggleModal, handleBookmark, bookmarked }) => {
   return (
     <header className="header">
       <div className="box">
-        <img src={logomc} alt="logo" className="header__logo" />
+        <img src={logomc} alt="" className="header__logo" />
 
         <h1 className="heading-primary header__title">
           Mastercraft Bamboo Monitor Riser
@@ -25,7 +25,7 @@ const Header = ({ toggleModal, handleBookmark, bookmarked }) => {
                 ? "header__bookmark header__bookmark--active"
                 : "header__bookmark"
             }
-            alt="bookmark"
+            aria-label="bookmark"
             onClick={handleBookmark}
           >
             <Bookmark className="header__bookmark-img" />

@@ -4,7 +4,7 @@ const Stats = ({ stats }) => {
   const { backed, backers, daysleft, progress } = stats;
 
   return (
-    <section className="stats box">
+    <section className="stats box" id="discover">
       <div className="stats__boxes">
         <div className="stats__box">
           <div className="stats__box-number">
