@@ -78,7 +78,6 @@ function App() {
   );
 
   const toggleMenu = () => {
-    console.log(`menu is ${openMenu}`);
     setOpenMenu(!openMenu);
   };
 
@@ -87,7 +86,6 @@ function App() {
   };
 
   const toggleSuccessModal = () => {
-    console.log("success modal open");
     setModalOpen(false);
     if (successModalOpen) {
       setSuccessModalOpen(false);
@@ -135,15 +133,13 @@ function App() {
   };
 
   const calculateProgress = (totalmoney) => {
-    console.log(totalmoney);
     const newWidth = parseInt((totalmoney * 100) / 100000);
-    console.log(newWidth);
+
     return newWidth;
   };
 
   const handleBookmark = () => {
     setStats({ ...stats, bookmarked: !stats["bookmarked"] });
-    console.log(stats["bookmarked"]);
   };
 
   useEffect(() => {

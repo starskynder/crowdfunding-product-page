@@ -4,9 +4,8 @@ import PledgeRadio from "./PledgeRadio";
 
 const Modal = ({ toggleModal, pledges, backProject, toggleSuccessModal }) => {
   const [status, setStatus] = useState("");
-  console.log(pledges);
+
   const toggleStatus = (currstatus) => {
-    console.log(currstatus);
     setStatus(currstatus);
   };
   return (
@@ -21,9 +20,10 @@ const Modal = ({ toggleModal, pledges, backProject, toggleSuccessModal }) => {
           the world?
         </p>
 
-        {pledges.map((pledgeitem) => {
+        {pledges.map((pledgeitem, index) => {
           return (
             <PledgeRadio
+              key={index}
               pledgeitem={pledgeitem}
               toggleStatus={toggleStatus}
               status={status}
