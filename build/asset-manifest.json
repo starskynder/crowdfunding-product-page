@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/crowdfunding-product-page/static/css/main.5260f0e6.chunk.css",
+    "main.js": "/crowdfunding-product-page/static/js/main.5697d4fd.chunk.js",
+    "main.js.map": "/crowdfunding-product-page/static/js/main.5697d4fd.chunk.js.map",
+    "runtime-main.js": "/crowdfunding-product-page/static/js/runtime-main.711afe9e.js",
+    "runtime-main.js.map": "/crowdfunding-product-page/static/js/runtime-main.711afe9e.js.map",
+    "static/js/2.86f95d53.chunk.js": "/crowdfunding-product-page/static/js/2.86f95d53.chunk.js",
+    "static/js/2.86f95d53.chunk.js.map": "/crowdfunding-product-page/static/js/2.86f95d53.chunk.js.map",
+    "static/js/3.ce8d38fb.chunk.js": "/crowdfunding-product-page/static/js/3.ce8d38fb.chunk.js",
+    "static/js/3.ce8d38fb.chunk.js.map": "/crowdfunding-product-page/static/js/3.ce8d38fb.chunk.js.map",
+    "index.html": "/crowdfunding-product-page/index.html",
+    "static/css/main.5260f0e6.chunk.css.map": "/crowdfunding-product-page/static/css/main.5260f0e6.chunk.css.map",
+    "static/js/2.86f95d53.chunk.js.LICENSE.txt": "/crowdfunding-product-page/static/js/2.86f95d53.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/crowdfunding-product-page/static/media/image-hero-mobile.d4f477d4.jpg",
+    "static/media/icon-bookmark.7777f8ec.svg": "/crowdfunding-product-page/static/media/icon-bookmark.7777f8ec.svg",
+    "static/media/icon-check.bdee5269.svg": "/crowdfunding-product-page/static/media/icon-check.bdee5269.svg",
+    "static/media/icon-close-menu.32169d31.svg": "/crowdfunding-product-page/static/media/icon-close-menu.32169d31.svg",
+    "static/media/icon-close-modal.732388df.svg": "/crowdfunding-product-page/static/media/icon-close-modal.732388df.svg",
+    "static/media/icon-hamburger.f8a9f0cf.svg": "/crowdfunding-product-page/static/media/icon-hamburger.f8a9f0cf.svg",
+    "static/media/logo-mastercraft.dca2a831.svg": "/crowdfunding-product-page/static/media/logo-mastercraft.dca2a831.svg",
+    "static/media/logo.e6f12bc6.svg": "/crowdfunding-product-page/static/media/logo.e6f12bc6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.711afe9e.js",
+    "static/js/2.86f95d53.chunk.js",
+    "static/css/main.5260f0e6.chunk.css",
+    "static/js/main.5697d4fd.chunk.js"
+  ]
+}
