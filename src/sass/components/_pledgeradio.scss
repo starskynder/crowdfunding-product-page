@@ -16,10 +16,10 @@
   }
   &__payment {
     border-top: 1px solid $dark-gray;
-    padding: 2rem;
+    padding-top: 2rem;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     grid-area: bottomer;
 
@@ -38,13 +38,18 @@
     border: 1px solid $dark-gray;
     border-radius: 30px;
     padding: 0.5rem 3rem;
-    max-width: 10rem;
+    max-width: 12rem;
     font-weight: bold;
     margin-right: 1rem;
     background-image: url(./../../images/dollar.svg);
     background-repeat: no-repeat;
     background-size: 38% 32%;
     background-position: center left;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 23.4em) {
+      margin-bottom: 0;
+    }
   }
 
   &__radio-container {
@@ -100,9 +105,13 @@
 
   &__confirm {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
 
-    justify-content: space-between;
+    @media screen and (min-width: 23.4em) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
   }
 
   &__top {
